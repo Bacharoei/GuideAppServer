@@ -33,6 +33,9 @@ mongoose.connection.on("connected", () => {
 const guidesRoutes = require("./api/routes/guides");
 const userRoutes = require("./api/routes/users");
 
+app.get('/', (req,res) => {
+  res.send("server-side");
+})
 app.use("/guides", guidesRoutes);
 app.use("/users", userRoutes);
 
